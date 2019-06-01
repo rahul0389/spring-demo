@@ -7,7 +7,13 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context-4.1.xsd">
 
-<bean id="myCoach" class="com.springdemo.BaseballCoach">
-
+<bean id="myFortuneService" class="com.springdemo.HappyFortuneService"></bean>
+<bean id="myCoach" class="com.springdemo.TrackCoach">
+<constructor-arg ref="myFortuneService"></constructor-arg>
 </bean>
+
+    <bean id="myLoggerConfig" class="com.springdemo.MyLoggerConfig" init-method="initLogger">
+    	<property name="rootLoggerLevel" value="FINE" />
+    	<property name="printedLoggerLevel" value="FINE"/>
+    </bean>
 </beans>

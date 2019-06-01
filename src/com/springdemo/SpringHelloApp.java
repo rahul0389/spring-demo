@@ -13,6 +13,7 @@ public class SpringHelloApp {
 		
 		// Call methods on bean 
 		System.out.println(thecoach.getDailyWorkout());
+		System.out.println(thecoach.getFortune());
 		// close the context
 		context.close();
 	}
