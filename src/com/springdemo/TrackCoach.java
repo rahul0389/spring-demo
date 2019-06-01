@@ -16,5 +16,16 @@ public TrackCoach(FortuneService myFortuneService)
 		
 		return fortuneService.getFortune();
 	}
+	
+	//add an init and destroy method
+	
+	public void doMyBootstarp()
+	{
+		System.out.println("TrackCoach: Inside startup method");
+	}
+	
+	public void doMyCleanup() {
+		System.out.println("TrackCoach: Inside Cleanup  method");
+	}
 
 }
